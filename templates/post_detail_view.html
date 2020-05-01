@@ -3,9 +3,13 @@
 {% block content %}
 
 
-<h1>{{ post.title }}</h1>
+<div class="container">
+	<h1>{{ post.title }}</h1>
 <h6>{{ post.author }}</h6>
-
+{% if post.cover %}
+	<img class="img-thumbnail" src="{{ post.cover.url }}" alt="{{ post.title }}">
+{% endif %}
 <h4>{{ post.text }}</h4>
+</div>
 
 {% endblock content %}
