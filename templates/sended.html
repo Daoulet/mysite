@@ -1,7 +1,12 @@
 {% extends "_base.html" %}
 
 {% block content %}
-<div class="container-sm">
-	<h1>Your message has been sent</h1>
+
+<div class="card text-center">
+  <div class="card-body">
+    <h1 class="card-title">Your message has been sent</h1>
+    <a href="{% url 'home' %}" class="btn btn-primary">Homepage</a>
+  </div>
 </div>
+
 {% endblock content %}

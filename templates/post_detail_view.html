@@ -3,13 +3,15 @@
 {% block content %}
 
 
-<div class="container">
-	<h1>{{ post.title }}</h1>
-<h6>{{ post.author }}</h6>
-{% if post.cover %}
-	<img class="img-thumbnail" src="{{ post.cover.url }}" alt="{{ post.title }}">
-{% endif %}
-<h4>{{ post.text }}</h4>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">{{ post.title }}</h1>
+    <h6>Author: {{ post.author }}</h6>
+    {% if post.cover %}
+		<img class="img-thumbnail" src="{{ post.cover.url }}" alt="{{ post.title }}">
+	{% endif %}
+    <p class="lead text-break">{{ post.text }}</p>
+  </div>
 </div>
 
 {% endblock content %}
