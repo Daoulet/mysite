@@ -1,19 +1,18 @@
 {% extends "_base.html" %}
 {% load crispy_forms_tags %}
 
-
+{% block title %}Contact us{% endblock title %}
 {% block content %}
 <div class="container-sm">
-<h1>Contact us</h1>
 
-  <form action="" method="post">
-	{% csrf_token %}
-	{{ form|crispy }}
-	<!-- {{ form.as_p }} -->
-	<button class="btn btn-success ml-2" type="submit">Send</button>
-</form>
+	<h1>Contact us</h1>
+
+	<form action="" method="post">
+		{% csrf_token %}
+		{{ form|crispy }}
+		<!-- {{ form.as_p }} -->
+		<button class="btn btn-success ml-2" type="submit">Send</button>
+	</form>
 </div>
-
-
 
 {% endblock content %}

@@ -10,4 +10,4 @@ class Contact(models.Model):
 		return self.email
 
 	def get_absolute_url(self):
-		return reverse('home')
+		return reverse('success')
