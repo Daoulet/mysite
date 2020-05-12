@@ -11,7 +11,16 @@
 		<img class="img-thumbnail" src="{{ post.cover.url }}" alt="{{ post.title }}">
 	{% endif %}
     <p class="lead text-break">{{ post.text }}</p>
+    <div class="card-footer">
+      {% for comment in post.comments.all %}
+        <p>
+          <span> {{ comment.author }} </span> <br>
+          {{ comment }}
+        </p>
+      {% endfor %}
+    </div>
   </div>
+
 </div>
 
 {% endblock content %}

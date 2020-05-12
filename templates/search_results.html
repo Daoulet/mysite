@@ -4,10 +4,15 @@
 
 <h1>Search results</h1>
 
-
+{% if post %}
 {% for post in object_list %}
 	<h3><a href="{{ post.get_absolute_url }}">{{ post.author }}</a></h3>
 	<h2>{{ post.title }}</h2>
 {% endfor %}
+{% else %}
+<h4>No results</h4>
+{% endif %}
+
+
 
 {% endblock content %}

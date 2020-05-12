@@ -11,6 +11,7 @@ class PostDetailView(DetailView):
 	context_object_name = 'post'
 	template_name='post_detail_view.html'
 
+
 class SearchResultsView(ListView):
 	model = Post
 	context_object_name = 'post'
